@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#081426">
+  <meta name="description" content="A little birthday universe made just for Sadiya, with love from Aseer.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="For Madam jii ♡ — a little universe from Aseer">
+  <meta property="og:description" content="Nineteen little surprises, tiny wishes, and one whole heart wishing you a beautiful year.">
+  <meta property="og:image" content="assets/share-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="For Madam jii ♡">
+  <meta name="twitter:description" content="A little birthday universe, made with love by Aseer.">
+  <meta name="twitter:image" content="assets/share-cover.svg">
+  <title>For Madam jii ♡</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sky" aria-hidden="true"><canvas id="stars"></canvas><div class="glow glow-a"></div><div class="glow glow-b"></div></div>
+  <div class="reading-progress"><span id="readingProgress"></span></div>
+  <header class="topbar">
+    <a href="#home" class="brand"><span>✦</span> for madam jii</a>
+    <button id="soundButton" class="sound-button" type="button" aria-pressed="false">♫ <span>sound off</span></button>
+  </header>
+  <main>
+    <section id="home" class="hero section">
+      <div class="moon" aria-hidden="true">♡</div>
+      <div class="hero-content">
+        <p class="eyebrow"><i></i> a tiny secret, just for you</p>
+        <h1>Psst…<br><em>Madam jii</em> <span class="pink">♡</span></h1>
+        <p class="hero-sub">Someone has been making a little universe<br class="desktop"> just for you.</p>
+        <button id="enterButton" class="gold-button" type="button">ENTER YOUR LITTLE WORLD <span>✦</span></button>
+        <p class="hint">sound on kar lena, agar dil kare 👀</p>
+      </div>
+      <div class="hero-bear" aria-label="A cute teddy bear illustration">
+        <span class="ear ear-left"></span><span class="ear ear-right"></span>
+        <span class="bear-head"><i class="eye eye-left"></i><i class="eye eye-right"></i><i class="blush blush-left"></i><i class="blush blush-right"></i><b class="muzzle"><i class="nose"></i><i class="mouth"></i></b></span>
+        <span class="bear-body"><i class="belly"></i><i class="arm arm-left"></i><i class="arm arm-right"></i><i class="foot foot-left"></i><i class="foot foot-right"></i><i class="bow">♡</i></span>
+        <span class="bear-float float-heart">♡</span><span class="bear-float float-star">✦</span>
+      </div>
+      <a href="#world" class="scroll-cue"><span></span> dheere dheere neeche aana</a>
+    </section>
+
+    <section id="world" class="world section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">13 october · a day made brighter</p>
+        <h2>Today, the stars<br><em>have your name.</em></h2>
+        <p>Is chhoti si duniya mein idhar-udhar dekho…<br>kuch cheezein sirf tumhare liye chhupi hain. ✨</p>
+      </div>
+      <div class="playground">
+        <button class="world-toy star-toy" data-message="Aapke har khwaab ko apna aasmaan mile. ✨" aria-label="Tap the star">✦<small>tap me</small></button>
+        <button class="world-toy flower-toy" data-message="Teri zindagi bhi phoolon ki tarah khilti rahe. 🌷" aria-label="Tap the flower">🌷<small>psst…</small></button>
+        <button class="world-toy balloon-toy" data-message="Aaj bas smile karna hai, Madam jii. 🎈" aria-label="Tap the balloon">🎈<small>boop!</small></button>
+        <div class="sticky-note"><span>♡</span><p id="worldMessage">A tiny world, with a very important guest.</p></div>
+      </div>
+    </section>
+
+    <section id="bear" class="bear-section section">
+      <div class="bear-panel reveal">
+        <div class="bear-stage"><div id="bear3D" class="bear-3d" role="button" tabindex="0" aria-label="Interactive 3D birthday teddy. Tap to make him react."></div><div class="mini-bear bear-fallback" aria-hidden="true"><span class="mini-ear one"></span><span class="mini-ear two"></span><span class="mini-face"><i></i><i></i><b></b><em></em></span><span class="mini-body"></span><span class="mini-heart">♡</span></div><span class="spark spark-one">✦</span><span class="spark spark-two">♡</span></div>
+        <div class="bear-text">
+          <p class="eyebrow">a tiny guest arrived</p><h2>Isne bhi tumhe<br><em>wish karna hai.</em></h2>
+          <p id="bearSpeech" class="speech">“Umm… hi Madam jii 😳”</p>
+          <div class="button-row"><button id="bearWave" class="soft-button">hi bolo 👋</button><button id="bearDance" class="soft-button">nachao 😂</button><button id="bearSurprise" class="soft-button">surprise ✨</button></div>
+          <p class="handwritten">isko tap karo… iski baatein khatam nahi hoti 🤭</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="blessings" class="blessings section">
+      <div class="section-heading reveal"><p class="eyebrow">chhoti chhoti duayein</p><h2>For the things<br><em>you deserve.</em></h2><p>Har card mein tumhare liye ek chhoti si dua. ♡</p></div>
+      <div class="blessing-grid">
+        <button class="blessing-card reveal" aria-expanded="false"><span class="blessing-icon">☾</span><span class="blessing-title">Peace</span><span class="card-hint">ek chhoti si dua ↗</span><span class="card-back">Teri zindagi mein sukoon ho, teri har shaam haseen rahe,<br>Aur jab dil udaas ho, meri yaad tere labon pe muskaan bane. ❤️</span></button>
+        <button class="blessing-card reveal" aria-expanded="false"><span class="blessing-icon">✦</span><span class="blessing-title">Courage</span><span class="card-hint">ek chhoti si dua ↗</span><span class="card-back">Har khwaab tera poora ho, har mushkil tu paar kare,<br>Tu khud pe yaqeen rakhna, koi ho na ho, yeh dil tujh pe naaz kare. 🫶</span></button>
+        <button class="blessing-card reveal" aria-expanded="false"><span class="blessing-icon">☀</span><span class="blessing-title">Happiness</span><span class="card-hint">ek chhoti si dua ↗</span><span class="card-back">Teri hansi se roshan rahein tere aane waale din,<br>May life keep giving you reasons to smile, again and again. 💗</span></button>
+        <button class="blessing-card reveal" aria-expanded="false"><span class="blessing-icon">♡</span><span class="blessing-title">Good People</span><span class="card-hint">ek chhoti si dua ↗</span><span class="card-back">Tujhe woh log milein jo teri khamoshi bhi samajh jaayein,<br>Jo tere aansu chhupa kar nahi, teri hansi sajaayein. 🌸</span></button>
+        <button class="blessing-card reveal" aria-expanded="false"><span class="blessing-icon">❀</span><span class="blessing-title">Beautiful Future</span><span class="card-hint">ek chhoti si dua ↗</span><span class="card-back">Tere kal mein itne khoobsurat manzar likhe jaayein,<br>Ke aaj ke saare khwaab, kal teri haqeeqat ban jaayein. ❤️</span></button>
+      </div>
+      <p class="handwritten centered">in sab duaaon mein tumhari khushi sabse pehle. ♡</p>
+    </section>
+
+    <section id="memories" class="memory-section section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">a little scrapbook</p>
+        <h2>Little moments,<br><em>kept close.</em></h2>
+        <p>Chaar tasveerein, chaar chhoti si yaadein — aur har ek ke saath dil ka ek alag kona. ♡</p>
+      </div>
+      <div class="memory-grid">
+        <button class="memory-card reveal" type="button" data-memory="Some moments are quiet, simple, and beautiful enough to keep coming back to. This view feels like one of those. ♡">
+          <span class="memory-tape" aria-hidden="true"></span>
+          <img class="memory-photo" src="assets/moment-worth-remembering.webp" alt="A peaceful lake surrounded by trees under a cloudy sky" loading="lazy" decoding="async">
+          <span class="memory-caption">A moment worth remembering</span><small>tap for a note ↗</small>
+        </button>
+        <button class="memory-card reveal" type="button" data-memory="A little moment from a special day — the kind of picture that deserves its own place in this tiny scrapbook. 💗">
+          <span class="memory-tape" aria-hidden="true"></span>
+          <img class="memory-photo" src="assets/favourite-little-moment.webp" alt="A woman helping another woman adjust her necklace at a celebration" loading="lazy" decoding="async">
+          <span class="memory-caption">A favourite little moment</span><small>tap for a note ↗</small>
+        </button>
+        <button class="memory-card reveal" type="button" data-memory="Our little chapter, captured in one frame. Not a perfect story — just a real one, with moments worth keeping close. 🫶">
+          <span class="memory-tape" aria-hidden="true"></span>
+          <img class="memory-photo" src="assets/our-little-chapter.webp" alt="A couple posing together at an indoor celebration" loading="lazy" decoding="async">
+          <span class="memory-caption">Our little chapter</span><small>tap for a note ↗</small>
+        </button>
+        <button class="memory-card reveal" type="button" data-memory="A handmade little rose, kept with care. Some gifts are small in size, but the thought behind them makes them stay in the heart. 🌹">
+          <span class="memory-tape" aria-hidden="true"></span>
+          <img class="memory-photo" src="assets/a-memory-to-keep.webp" alt="A handmade paper rose wrapped with a red ribbon" loading="lazy" decoding="async">
+          <span class="memory-caption">A memory to keep</span><small>tap for a note ↗</small>
+        </button>
+      </div>
+      <p class="handwritten centered">little pieces of our story, kept close. ♡</p>
+    </section>
+
+    <section id="gifts" class="gifts section">
+      <div class="section-heading reveal"><p class="eyebrow">19 little surprises</p><h2>Chhote gifts,<br><em>bohot saara pyaar.</em></h2><p>Har box kholo, Madam jii. Kuch cute hai, kuch silly… aur ek last mein chhupa hai. 👀</p></div>
+      <div class="gift-count"><span id="openedCount">0</span> / 19 opened <span class="count-track" role="progressbar" aria-label="Gifts opened" aria-valuemin="0" aria-valuemax="19" aria-valuenow="0"><i id="giftProgress"></i></span></div>
+      <div id="giftGrid" class="gift-grid"></div>
+      <p class="handwritten centered">ek ek karke kholo… jaldi kis baat ki? 🤭</p>
+    </section>
+
+    <section id="poem" class="poem-section section">
+      <article class="poem-paper reveal">
+        <p class="eyebrow">if I could give you something</p><h2>If I could give you<br><em>the whole world…</em></h2>
+        <div class="poem-lines">
+          <p>Agar tere liye duniya ke saare haseen tohfe chun sakta,</p>
+          <p>Har subah ko teri hansi, har shaam ko sukoon bun sakta.</p>
+          <p>Tere raaston se har woh kaanta khamoshi se hata deta,</p>
+          <p>Tere khwaabon ke aangan mein umeed ke diye jala deta.</p>
+          <p>Magar zindagi toh apne rang khud hi dikhati hai,</p>
+          <p>Kabhi dhoop, kabhi baarish, kabhi aankhon ko rulati hai.</p>
+          <p>So I cannot promise skies that never turn grey,</p>
+          <p>Bas dua hai, you never have to face them feeling alone that day.</p>
+          <p>Tujhe apni qeemat samajhne ke liye kisi ki tasdeeq na chahiye,</p>
+          <p>Tere dil ko woh mohabbat mile jahan khud ko badalne ki majboori na aaye.</p>
+          <p>Tere hisse mein woh log hon jo teri khamoshi bhi padh lein,</p>
+          <p>Jo tere chehre ki hansi ke peeche chhupe ehsaas bhi samajh lein.</p>
+          <p>Aur agar meri dua ka koi chhota sa tohfa ban paaye,</p>
+          <p>Toh har naya saal tujhe tere apne aur qareeb le aaye. ❤️</p>
+        </div><span class="paper-flower" aria-hidden="true">✿</span>
+      </article>
+    </section>
+
+    <section id="promise" class="promise-section section">
+      <div class="promise-card reveal"><p class="eyebrow">a little promise</p><h2>Not a perfect world.<br><em>A sincere wish.</em></h2>
+        <div class="promise-lines">
+          <p>I can’t promise ke har din aasaan hoga,</p>
+          <p>Har raasta seedha, har mausam meherbaan hoga.</p>
+          <p>Par meri dua hai, tu khud se kabhi haar na maane,</p>
+          <p>Apne dil ki awaaz ko duniya ke shor mein khona na jaane.</p>
+          <p>May you keep your softness, even when life feels tough,</p>
+          <p>Apne liye kharay rehna bhi hai — you have always been enough.</p>
+          <p>Jab khushi aaye, usey bina darr ke jee bhar ke jeena,</p>
+          <p>Jab waqt mushkil ho, khud ko thoda pyaar se thaam lena.</p>
+          <p>And wherever your dreams take you, may your heart feel free,</p>
+          <p>Khush rehna, Madam jii — that is the wish I’ll keep quietly. ❤️</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cake" class="cake-section section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">make a birthday wish</p>
+        <h2>One little cake,<br><em>nineteen candles of love.</em></h2>
+        <p>Har candle ek dua samajh lo. Light them, close your eyes, and make a wish, Madam jii. 🎂</p>
+      </div>
+      <div class="cake-stage reveal">
+        <div class="cake-illustration" role="img" aria-label="A pink and cream birthday cake with nineteen candles">
+          <div id="candles" class="candles" aria-label="Birthday candles"></div>
+          <div class="cake-tier tier-two"></div><div class="cake-top"></div><div class="cake-tier tier-one"></div><div class="cake-plate"></div>
+        </div>
+        <p id="cakeMessage" class="cake-message" aria-live="polite">Ready, birthday girl? 🥹</p>
+        <div class="button-row centered-row"><button id="lightCandles" class="gold-button" type="button">LIGHT THE CANDLES ✦</button><button id="blowCandles" class="soft-button" type="button" disabled>MAKE A WISH & BLOW ♡</button></div>
+      </div>
+    </section>
+
+    <section id="constellation" class="constellation-section section">
+      <div class="section-heading reveal"><p class="eyebrow">written in the stars</p><h2>Some names deserve<br><em>their own sky.</em></h2><p>Tap the stars, and let the night spell one name that matters here. ✨</p></div>
+      <div class="constellation-wrap reveal"><canvas id="constellationCanvas" aria-label="A night sky that reveals Sadiya's name"></canvas><p class="handwritten">for Sadiya, with a little universe of her own. ♡</p><button id="connectStars" class="gold-button" type="button">CONNECT THE STARS ✦</button></div>
+    </section>
+
+    <section id="finale" class="finale section">
+      <div class="finale-stars" aria-hidden="true">✦ · ✧ · ✦ · ♡ · ✧ · ✦</div>
+      <div class="finale-content reveal"><p class="eyebrow">for the girl who makes ordinary days special</p><h2>Happy Birthday,<br><em>Madam jii.</em> ♡</h2>
+        <div class="final-ghazal">
+          <p>Teri aankhon mein jo thehra hai, woh khwaabon ka safar lage,</p>
+          <p>Teri muskurahat se roshan har udaas sa shehar lage.</p>
+          <p>Tere chehre pe noor aisa, subah ki pehli kiran jaisa,</p>
+          <p>Tujhe dekhe toh chaand bhi kuch pal ko be-asar lage.</p>
+          <p>Teri baaton mein narmi hai, kisi geet ki rawaani si,</p>
+          <p>Teri khamoshi bhi kabhi dil ko ek pyari kahaani si.</p>
+          <p>Teri zulfon pe shaam thehre, teri hansi pe phool khilein,</p>
+          <p>Tere qadam jahaan bhi jaayein, raaston pe rang milein.</p>
+          <p>Magar husn sirf chehre ka ho, toh baat adhoori hai,</p>
+          <p>Teri fitrat ki roshni hi teri sabse pyari noori hai.</p>
+          <p>Tera dil jo khwaab sambhaale, woh sab ek din sach ho jaayein,</p>
+          <p>Teri aankhon ke saare aansu dua ban kar beh jaayein.</p>
+          <p>May you be loved without pretending, understood without explaining,</p>
+          <p>May peace find you in the quiet, and hope keep gently remaining.</p>
+          <p>Teri har jeet pe khushiyon ke naye phool khilaaun main,</p>
+          <p>Teri thakan bhari shaamon ko duaon se sajaaun main.</p>
+          <p>Tu apni nazron mein hamesha apni qeemat pehchaane,</p>
+          <p>Koi duniya kuch bhi keh de, tu khud ko kam na jaane.</p>
+          <p>Meri zindagi ke safhon mein tera zikr ek narmi sa hai,</p>
+          <p>Jaise lambi raat ke baad subah ka pehla ujala sa hai.</p>
+          <p>Main teri kahaani ka har mod apna keh nahi sakta,</p>
+          <p>Par tere liye nek dua karna kabhi chhod nahi sakta.</p>
+          <p>So on your birthday, may every gentle wish come true,</p>
+          <p>May life return the kindness that the world receives from you.</p>
+          <p>Aaj ka din tera hai, har khushi tere naam rahe,</p>
+          <p>Teri hansi salamat rahe, tera dil aabaad rahe.</p>
+          <p>Aur jab kabhi yeh din guzre, bas itna yaad rakhna,</p>
+          <p>Kisi ne dil se chaha hai ke tu hamesha khush rahe. ❤️</p>
+        </div>
+        <p class="birthday-wish">May this year bring you peace, courage, and happiness you never have to force.</p>
+        <p class="signature">With all my heart,<br><span>Aseer ♡</span></p>
+        <button id="celebrateButton" class="gold-button" type="button">ONE LAST SURPRISE ✦</button>
+      </div>
+      <div id="confetti" class="confetti-layer" aria-hidden="true"></div>
+    </section>
+  </main>
+  <footer><span>made with love, just for you ♡</span><span>— Aseer</span></footer>
+
+  <dialog id="giftDialog" class="gift-dialog" aria-labelledby="giftRevealTitle" aria-describedby="giftRevealMessage">
+    <button id="closeGift" class="close-dialog" aria-label="Close gift" type="button">×</button>
+    <div id="giftRevealArt" class="gift-reveal-art">🧸</div>
+    <p class="eyebrow">a little something for you</p>
+    <h2 id="giftRevealTitle">A tiny surprise</h2>
+    <p id="giftRevealMessage" class="gift-reveal-message"></p>
+    <button id="giftDialogDone" class="gold-button" type="button">AWWW, NEXT ✦</button>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
